@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 # This script generates all config files and creates a default save
 
 mkdir -p $(dirname "$CONFIG")

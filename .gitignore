@@ -1,5 +1,6 @@
 *
 
 !.gitignore
+!.dockerignore
 !Dockerfile
 !generate-server.sh

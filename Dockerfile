@@ -1,5 +1,5 @@
-FROM ubuntu:trusty
-LABEL maintainer="DerEnderKeks <admin@derenderkeks.me>" version="0.0.1" description="Docker image for factorio servers"
+FROM frolvlad/alpine-glibc:alpine-3.5_glibc-2.25
+LABEL maintainer="DerEnderKeks <admin@derenderkeks.me>" version="0.15.2" description="Docker image for factorio servers"
 
 WORKDIR /srv/factorio
 ENV SERVER /srv/factorio/bin/x64/factorio
@@ -7,8 +7,7 @@ ENV CONFIG /srv/factorio/config/server-settings.json
 ENV WHITELIST /srv/factorio/config/server-whitelist.json
 ENV BANLIST /srv/factorio/config/server-banlist.json
 
-RUN apt-get update
-RUN apt-get install -y curl xz-utils
+RUN apk add --update-cache curl tar xz
 
 ARG VERSION=0.15.2
 
@@ -20,5 +19,3 @@ EXPOSE 34197/udp
 VOLUME /srv/factorio/config /srv/factorio/saves /srv/factorio/mods
 
 CMD ["sh", "-c", "$SERVER --start-server-load-latest --server-settings $CONFIG --server-whitelist $WHITELIST --server-banlist $BANLIST"]
-
-
