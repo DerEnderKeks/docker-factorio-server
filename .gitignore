@@ -1,8 +1,8 @@
-*
+.*
 
-!.gitignore
+/mods
+/saves
+/config
+
 !.dockerignore
-!Dockerfile
-!docker-compose.yml
-!generate-server.sh
-!Readme.md
+!.gitignore
