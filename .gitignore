@@ -3,4 +3,6 @@
 !.gitignore
 !.dockerignore
 !Dockerfile
+!docker-compose.yml
 !generate-server.sh
+!Readme.md

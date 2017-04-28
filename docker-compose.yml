@@ -1,0 +1,11 @@
+version: '3'
+services:
+  factorio_server:
+    image: derenderkeks/factorio-server
+    ports:
+      - '34197/udp:34197/udp'
+    volumes:
+      - './config:/srv/factorio/config'
+      - './saves:/srv/factorio/saves'
+      - './mods:/srv/factorio/mods'
+    restart: always
