@@ -20,6 +20,11 @@ docker run --rm -v $PWD/config:/srv/factorio/config -v $PWD/saves:/srv/factorio/
 
 #### docker-compose
 
+First, clone the repository to get the `docker-compose.yml` file:
+```shell
+git clone https://github.com/DerEnderKeks/docker-factorio-server.git .
+```
+
 To generate the config files execute: 
 ```shell
 docker-compose run factorio_server ./generate-server.sh
