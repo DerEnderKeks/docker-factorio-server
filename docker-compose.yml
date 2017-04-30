@@ -7,8 +7,8 @@ services:
     ## RCON settings ##
     #  - '27015:27015'
     #environment:
-    #    - RCONPORT=27015
-    #    - RCONPASSWORD=
+    #  - RCONPORT=27015
+    #  - RCONPASSWORD=
     volumes:
       - './config:/srv/factorio/config'
       - './saves:/srv/factorio/saves'
