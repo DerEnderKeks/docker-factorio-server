@@ -3,7 +3,7 @@ services:
   factorio_server:
     image: derenderkeks/factorio-server
     ports:
-      - '34197/udp:34197/udp'
+      - '34197:34197/udp'
     ## RCON settings ##
     #  - '27015:27015'
     #environment:

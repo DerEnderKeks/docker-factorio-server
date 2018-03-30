@@ -9,9 +9,7 @@ ENV BANLIST /srv/factorio/config/server-banlist.json
 
 RUN apk add --update-cache curl tar xz
 
-ARG VERSION=0.15.21
-
-RUN curl -sL https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar --strip-components=1 -xJ
+RUN curl -sL https://www.factorio.com/get-download/stable/headless/linux64 | tar --strip-components=1 -xJ
 
 COPY . /srv/factorio/
 
